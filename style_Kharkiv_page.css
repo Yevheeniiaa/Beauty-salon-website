@@ -1,0 +1,432 @@
+.header{
+    max-width: 1330px;
+}
+#navbar{
+  position: fixed;
+  top:0px;
+  z-index:1;
+  width: 100%;
+}
+.head_menu {
+    z-index: 1;
+    display: flex;
+    align-items: center; /*выравнивание элементов внутри flex контейнера*/
+    list-style: none; /*убирает маркирование списка ????*/
+    left: 45px;
+    padding: 25px;
+    background-color: #FFFFFF;;
+    justify-content:space-between;
+    box-shadow: 1px 5px 10px -5px black;
+    flex-wrap:wrap;
+
+}
+li.head_menu{
+    position: relative;
+}
+ul.head_menu{
+    padding: 0px;
+    margin: 0px;
+}
+.elem_menu {
+  dispay: block;
+  color: #525252;
+  font-size: 19px;
+  text-align: center;/*расположение текста внутри объекта*/
+  font-family: "Georgia";
+  text-decoration: none;/*убирает подчеркивание*/
+  transition: all 0.3s ease;
+    }
+  #cur_page,  #cur_page_pod{
+    background-color: #ECECEC;
+    color: #947C55;
+    text-decoration: underline;
+  }
+
+
+#logo{
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 50px;
+}
+#abrev{
+    color: black;
+    margin-left: 2px; 
+    font-weight: bold;
+}
+#phone{
+    width: 50px;
+    padding-right:5px;
+}
+.submenu{ 
+    z-index: 1;
+    position: absolute;
+    list-style: none;
+    padding-top: 30px;/*пространство вокруг элмента контента top, right, botton, left*/  
+    clip: rect(0 0 0 0); 
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+ul.submenu{
+    padding-left: 0;
+}
+.submenu_elem{
+  display: block;
+  padding: 2px;
+  color: #2D2D2D;
+  font-size: 19px;
+  text-align: center;/*расположение текста внутри объекта*/
+  font-family: "Georgia";
+  text-decoration: none;/*убирает подчеркивание*/
+  background-color:#FFFFFF;
+  box-shadow: 1px 5px 10px -5px black;
+  transition: all 0.3s ease;
+}
+
+li:hover>.submenu{
+    clip: auto; 
+    width: auto;
+    height: auto;
+}
+.submenu_elem:hover{
+    background-color: #ECECEC;
+    color: #B09467;
+    transition: all 0.3s ease;
+}
+.elem_menu:hover {
+  background-color: #ECECEC;
+  color: #B09467;
+  transition: all 0.3s ease;
+}
+.elem_menu:active{ /*active AFTER hover*/
+    background-color: #947C55;
+    text-decoration: underline;
+}
+#logo, #abrev:active{
+    background-color: white;
+    text-decoration: none;
+}
+#abrev:hover{
+    background-color: white;
+}
+/*adress*/
+.inform_adress{
+    display:flex;
+    justify-content: space-between;
+    align-items: center
+}
+.adress{
+    margin-top:30px;
+    margin-left:30px;
+}
+.el_loc{
+    padding-left:10px;
+}
+#nauk{
+    font-family: Arial,sans-serif;
+    color:#B09467;
+    margin-bottom: 23px;
+    font-size: 22px;
+}
+#adr_conc{
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+#descr_adress{
+    font-family: "Times New Roman", Arial, serif;
+    font-size: 20px;
+    color: gray;
+    font-weight: lighter;
+    word-wrap: break-word;
+}
+.contacts, .location, .telep_adress, .insta_adress{
+    display: flex;
+    align-items: center;
+}
+.contacts{
+    flex-wrap: wrap;
+}
+.teleph_adress, .insta_adress, .location{
+    flex-wrap: nowrap;
+}
+.contacts p{
+    font-weight: bold;
+    padding-left: 10px;
+    margin-right: 50px;
+    font-family: "Times New Roman", Arial, serif;
+    font-size: 20px;
+}
+#khar_sal_img{
+    height: 400px;
+    margin-top:110px;
+}
+
+/*POP_UP*/
+  .pop_up{
+    display:none;
+    width:100%;
+    height:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index:2;
+  }
+  .message{
+    display:none;
+    width:100%;
+    height:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index:3;
+  }
+  .pop_up.active{
+    display:block;
+  }
+  .message.active{
+    display:block;
+  }
+  .pop_up_container, .message_container{
+    display:flex;
+    overflow: scroll;
+    width:100%;
+    height:100%;
+  }
+  .pop_up_body, .message_body{
+    margin:auto;
+    width:500px;
+    background-color: white;
+    border-radius:10px;
+    text-align:center;
+    padding:100px 15 px 110px 15 px;
+    position:relative;
+  }
+  #artic{
+    font-size:20px;
+    font-family:"Georgia";
+    font-weight: 550;
+    color: black;
+    margin-bottom:12px;
+  }
+  .pop_up_body label{
+    font-family: "Georgia";
+    font-weight:500;
+    font-size:17px;
+  }
+
+  .pop_up_body input{
+    display:block;
+    width:330px;
+    margin:5px auto 10px auto;
+    padding:10px 10px;
+    background-color: #FFEFD3;
+    border-radius:10px;
+    border:none;
+    font-family: "Georgia";
+    font-weight:500;
+    font-size:16px;
+    color:black;
+  }
+  .pop_up_body input:focus{ /*убирает черную обводку при нажатии*/
+    outline: none;
+  }
+  .service, #userMast, #usertime, #userSalAdr {
+    margin-left:20px;
+    font-family: "Georgia";
+    font-weight:500;
+    font-size:16px;
+  }
+  .salon_adress, .master, .date, .time{
+    visibility: hidden;
+  }
+  .salon_adress.visb, .date.visb, .master.visb, .time.visb{
+    visibility: visible;
+  }
+  .pop_up_body button{
+    /*width:330px;*/
+    /*margin:25px auto 20px auto;*/
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 25px;
+    font-family:"Georgia";
+    font-weight:500;
+    font-size:19px;
+    border:none;
+    color:black;
+    border-radius:7px;
+    background-color:#F8E1BA;
+  }
+  .pop_up_close, .close_wind{
+    position:absolute;
+    top:15px;
+    right:15px;
+    font-size:21px;
+    cursor:pointer;
+  }
+  .message_body p{
+    font-size: 20px;
+    font-family: "Georgia";
+    font-weight:500;
+  }
+
+/*Footer*/
+.name_footer{
+    display: flex;
+    align-items: top; /*выравнивание элементов внутри flex контейнера*/
+    list-style: none; /*убирает маркирование списка ????*/
+    /*left: 45px;*/
+    padding-top: 25px;
+    padding-bottom:25px;
+    background-color: black;
+    justify-content:space-between ;
+    overflow-x: hidden;
+  }
+  ul.name_footer{
+    padding-left:5px;
+    pudding-right:5px;
+    margin-bottom: 0;
+  }
+
+  .elem_footer{
+    display: block;
+    /*margin-left: 25px;
+    margin-right:30px;*/
+    list-style: none;
+    text-decoration: none;/*убирает подчеркивание*/
+    text-align: center;/*расположение текста внутри объекта*/
+
+  }
+  li.name_footer{
+    position: relative;
+    margin-bottom: 5px;
+    text-decoration: none;
+    bottom: -150px;
+  }
+  .elem_footer p{
+    color: white;
+    margin:0px;
+    font-size: 20px;
+    font-weight: 600px;
+    font-family: "Georgia";
+  }
+ .soc_network_ic{
+    display: block;
+    padding-top: 15px;
+    position: relative;
+    left: 5px;
+    bottom: 2px;
+ }
+ .soc_network_ic img{
+    border: solid;
+    border-color:#987A4D ;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    margin: 7px;
+  }
+  .soc_network_ic img:hover
+  {
+    border: solid;
+    border-color: white;
+  }
+  .elem_footer ul{
+    padding-top: 15px;
+    padding-left: 7px;
+    padding-right:12px;
+  }
+  .lst_inform_footer{
+    /*padding-right: 30px;*/
+    font-size: 18px;
+    list-style-type: none;
+    text-decoration: none;/*убирает подчеркивание*/
+    color:white;
+    margin-top:20px;
+    font-weight: normal;
+    word-wrap: none;
+  }
+  a.lst_inform_footer:hover {
+  color: #B09467;
+  transition: all 0.3s ease;
+  }
+  #cur_page_foot
+  {
+    color:#B09467;
+    text-decoration: underline;
+  }
+
+@media(max-width: 1000px){
+    #navbar{
+        max-width: 800px;
+    }
+    #logo{
+    padding-left: 280px;
+   }
+   #abrev
+   {
+    padding-right: 200px;
+   }
+    .elem_menu{
+        padding-right: 5px;
+    }
+    .adress{
+    margin-top:120px;
+    }
+    #khar_sal_img{
+    height: 250px;
+    }
+    
+}
+@media(max-width: 800px){
+   #navbar {
+        max-width: 450px;
+    }
+   #logo{
+    padding-left: 40px;
+   }
+   #abrev
+   {
+    padding-right: 50px;
+   }
+   #phone{
+    width: 35px;
+   }
+   #logo{
+    width:35px;
+   }
+   #cur_page{
+    margin-left:30px;
+    margin-right:20px;
+   }
+   #phone{
+    width: 35px;
+   }
+   #logo{
+    width:35px;
+   }
+    .elem_footer p{
+    font-size: 15px;
+   }
+   .lst_inform_footer{
+    font-size: 14px;
+    }
+    #khar_sal_img{
+    height: 160px;
+    }
+    #nauk{
+    font-size: 21px;
+    }
+    #adr_conc{
+    font-size: 19px;
+    }
+
+    #descr_adress{
+    font-size: 18px;
+    }
+    .contacts p{
+    font-size: 17px;
+    }
+}

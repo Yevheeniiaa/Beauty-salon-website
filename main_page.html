@@ -1,0 +1,228 @@
+<!DOCTYPE html> <!--декларация это не HTML тег, это информация браузеру какой документ ожидается-->
+<html> <!--тег, который представляет так называемый корень документа и содержит в себе все теги-->
+<head> <!--это контейнер для метаданных, расположен между тегами html и body. Метаданные - данные о HTML документе, они не отображаються: заголовок, стиль, ссылки, <meta>, <script> -->
+<meta charset = "utf-8"> <!--кодировка символов для документа HTML -->
+<link rel="stylesheet" href="style_main_page.css"> <!--<link>  определяет взаимоотношение между текущим документом и дополнительными ресурсами. rel="stylesheet" импортирует таблицу стилей. href определяет нахождение дополнительного ресурса-->
+<script src="https://kit.fontawesome.com/727dca54e2.js" crossorigin="anonymous"></script> <!-- указывает на внешний файл сценария через атрибут src (определяет URL внешнего файла сценария) crossorigin задает режим запроса HTTP CORS Request, а он представляет собой механизм, который позволяет запрашивать ресурсы на веб-странице из другого домена за пределами их собственного домена anonymous выполняется запрос между источниками. Учетные данные не отправляются-->
+</head>
+<body>
+<header class= "header"> <!--для представление контента или навигационных ссылок -->
+<div id = "navbar"> <!-- определяет секцию или разделение в документе. Я добавляла свойства к этому блоку с помощью ID тега div -->
+	<ul class = "head_menu"> <!--задает неупорядоченный список-->
+		<li> <a href="main_page.html"><img src = "image/logo.jpg" alt = "logo" class = "elem_menu" id = "logo"></a></li> <!--li определяет элемент списка a - определяет гиперссылку, которая используется для ссылки с одной страницы на другую. href атрибут, указывающий назначение ссылки. <img>используется для встраивания изображения в HTML-страницу src - указывает путь к изображению
+alt - Задает альтернативный текст для изображения, если изображение по какой-то причине не может быть отображено -->
+		<li><p class = "elem_menu" id = "abrev">Салон краси "Афродіта"</p></li>
+		<li><a href = "#" class = "elem_menu" id = "cur_page">Головна сторінка</a></li>
+		
+		<li><a href = "#" class = "elem_menu">Послуги</a></li>
+		<li><a href = "#" class = "elem_menu" id ='sal'>Міста</a>
+		  <ul class="submenu">
+			<li><a href="Kharkiv_page.html" class = "submenu_elem">Харків</a></li>
+			<li><a href="#"class = "submenu_elem">Київ</a></li>
+			<li><a href="#"class = "submenu_elem">Одеса</a></li>
+			<li><a href="#"class = "submenu_elem">Варшава</a></li>
+		  </ul> 
+	    </li>
+	    <li><a href = "#" class = "elem_menu">О нас</a></li>
+	    	<li><a href = "#" class = "elem_menu" id ="our_mast">Наші майстри</a>
+		<ul class="submenu">
+			<li><a href="" class = "submenu_elem">Склад</a></li>
+			<li><a href=""class = "submenu_elem">Кваліфікація</a></li>
+			<li><a href=""class = "submenu_elem">Заслуги</a></li>
+		 </ul> 
+		</li>
+		<li><a href = "#" class = "elem_menu">Відгуки</a>
+		<ul class="submenu">
+			<li><a href="" class = "submenu_elem">Майстри</a></li>
+			<li><a href=""class = "submenu_elem">Салон</a></li>
+		 </ul> 
+		</li>
+		<li><a href ="#" class="elem_menu open_pop_up">Online запис</a></li>
+		<li> <img src = "image/phone.png" alt = "phone" class = "elem_menu" id = "phone"></li>
+	</ul>
+</div>
+</header>
+<div class = "slid_text">
+<div class = "slider middle">
+  <div class="slides">
+  	<!--Создается группа радиокнопок благодаря одинаковому name(одновременно может быть выбрана только одна радиокнопка в группе) -->
+
+    <input type="radio" name = "r" id = "r1" checked><!--input Тег определяет поле ввода, в которое пользователь может вводить данные checked это булевый атрибут, элемент должен быть выбранным, когда страница загружается -->
+    <input type="radio" name = "r" id = "r2">
+    <input type="radio" name = "r" id = "r3">
+    <input type="radio" name = "r" id = "r4">
+
+    <div class="slide s1" id="slide1">
+    	 <img src="image/1-act-inf.png" alt="act_inf_1">
+    	 <div class="text_1_act">
+    		<p class = "frst_phrase_frst_sl">Мережа салонів краси "Афродіта"</p>
+    		<p class = "main_inf_frst_sl">Робимо так, аби Ви почували себе впевнено та <br>привабливо</p>
+    		<a href ="#" class = "onl_link open_pop_up">Online запис</a>
+    	 </div>	
+    </div>
+    <div class="slide">
+    	<img src="image/2-act-inf.jpeg" alt="">
+    	<div class="text_2_act">
+    		<p class = "frst_phrase_sec_sl">Довіряй <br>професіоналам</p>
+    		<p class = "main_inf_sec_sl">Фарбування волосся <br>будь-якої складності</p>
+    		<a href ="#" class = "onl_link open_pop_up" >Online запис</a>
+    	 </div>	
+    </div>
+    <div class="slide">
+    	<img src="image/3-act-inf.jpg" alt="">
+    	<div class="text_3_act">
+    		<p class = "frst_phrase_thr_sl">Ідеальний манікюр <br> за 1,5 години</p>
+    		<p class = "main_inf_thr_sl">Безпека гарантована <br> медичною стерилізацію</p>
+    		<a href ="#" class = "onl_link open_pop_up" >Online запис</a>
+    	 </div>	
+    </div>
+    <div class="slide">
+    	<img src="image/4-act-inf.jpg" alt="">
+    	<div class="text_4_act">
+    		<p class = "frst_phrase_four_sl">Макіяж<br>для будь-якої події</p>
+    		<p class = "main_inf_four_sl">Та сама команда майстрів,<br>які почують ваші "хочу"</p>
+    		<a href ="#" class = "onl_link open_pop_up"s>Online запис</a>
+    	 </div>
+    </div>
+  </div>
+  <div class="navigation">
+    <label for="r1" class = "bar"></label> <!--определяет метку для элемента for указывает идентификатор элемента формы, к которому должна быть привязана метка-->
+    <label for="r2" class = "bar"></label>
+    <label for="r3" class = "bar"></label>
+    <label for="r4" class = "bar"></label>
+  </div>
+</div>
+	<div class = "sec_text">
+	<p id = "inf_sal_frst">Ласкаво просимо у світ краси, здоров'я та відпочинку!<br>Розкішний салон "Афродіта" надасть вам і перше, і друге, і третє.</p> <!--br отвечает за перенос текста-->
+    <p id = "inf_sal_sec" >Якщо ви шукаєте салон краси з унікальною атмосферою, високим рівнем  обслуговування, фірмовою продукцією та професійними, досвідченими  фахівцями, здатними задовольнити найвибагливіші очікування, Ви потрапили за адресою. Кількість наших постійних клієнтів зростає з кожним роком</p>
+    </div>
+</div>
+<div class = "pop_up" >
+	<div class = "pop_up_container">
+		<div class = "pop_up_body">
+			<p id = "artic"> Online запис </p>
+			<form id = "forma" action = "#">
+				<!-- использует для создания HTML формы для пользовательского ввода action - Указывает, куда отправлять данные формы при отправке формы-->
+				<p class= "elem_form">
+					<label for = "userName">Ім'я</label>
+					<input id = "userName" type="text" pattern = "[А-ЯЇІҐЄ][а-яїіґє]{1,}" placeholder="Введіть ім'я" required >
+				</p>
+				<p class= "elem_form">	
+					<label for = "userEmail">Електронна пошта</label>
+					<input id = "userEmail" type="email" pattern = "[a-z0-9._%+-]{1,}@gmail.com" placeholder="Введіть електронну пошту" required>
+				</p>
+				<p class= "elem_form">	
+					<label for = "userTel">Номер телефону</label>
+					<input id = "userTel" type="tel" pattern = "\+[3][8][0][0-9]{9}" placeholder="Введіть номер телефону" required>
+				</p>
+				<p class= "elem_form">	
+					<label for ="userServ">Послуга</label>
+				    <select id = "userServ" class = "service" onchange = "serveFunc()" required>
+				       	  <option value="">Виберіть послугу</option>
+                       <optgroup label="Зачіски">
+                          <option value="1">Жіноча стрижка</option>
+                          <option value="2">Стрижка чубчика</option>
+                          <option value="3">Плетіння</option>
+                       </optgroup>
+                       <optgroup label="Манікюр">
+                          <option value="4">Нарощування</option>
+                          <option value="5">Покриття</option>
+                          <option value="6">Японський манікюр</option>
+                       </optgroup>
+                          <optgroup label="Макіяж">
+                          <option value="7">Денний макіяж</option>
+                          <option value="8">Вечірній макіяж</option>
+                          <option value="9">Коктельний макіяж</option>
+                       </optgroup>
+                    </select>
+				</p>
+				<p class = "salon_adress">
+                   <label for = "userSalAdr">Адрес салону</label>
+                   <select id = "userSalAdr" onchange = "adressSalFunc()" required>
+                   	  <option value="">Виберіть салон</option>
+                      <option value="10">Пр-т Нуки, 23, Харків</option>
+                      <option value="11">Вул. Шевченка, 56, Київ</option>
+                      <option value="12">Вул. Івана Франка, 101, Одеса</option>
+                      <option value="13">ul. Piękna 49, Warszawa</option>
+                   </select>
+                </p>
+				<p class = "master">
+                   <label for = "userMast">Майстер</label>
+                   <select id = "userMast" onchange = "masterFunc()" required>
+                   	  <option value="">Виберіть майстра</option>
+                      <option value="14">Марія Білановська</option>
+                      <option value="15">Олександра Валвіна</option>
+                      <option value="16">Іванна Цукрен</option>
+                      <option value="17">Лілія Карпач</option>
+                   </select>
+                </p>
+                <p class ="date">
+                	<label for = "userDate">Дата запису</label>
+                	<input type="date" id = "userDate" oninput="dateFunc()" min="2022-12-25" max="2023-01-31" required>
+                </p>
+                <p class ="time">
+                  <label for = "usertime">Час запису</label>
+                  <select id = "usertime" onchange = "timeFunc()" required>
+                       <option value="">Виберіть час</option>
+                      <option value="18">13:30</option>
+                      <option value="19">15:00</option>
+                      <option value="20">16:30</option>
+                      <option value="21">18:30</option>
+                   </select>
+                </p>
+				<button type = "submit" class = "sub_form">Записатися</button>
+                <button type = "reset" id = "res_form" onclick = "resetFunc()">Очистити</button>
+			</form>
+			<div class="pop_up_close">&#10006</div>
+		</div>
+	</div>
+</div>
+	<div class = "message" id = "message">
+	             <div class ="message_container">
+		              <div class = "message_body">
+			              <p>Online запис виконано успішно</p>
+			                 <button type = "submit" class = "close_wind" form="forma">&#10006</button>
+		               </div>
+	              </div>
+            </div>
+<footer>
+  <ul class="name_footer">
+  	<li class = "elem_footer">
+     <p>"Афродіта"</p>
+     <div class="soc_network_ic">
+     <a href="#"><img src = "image/telegram.png" alt = "telegram" id = "telegram"></a>
+    <a href="#"><img src = "image/instagram.png" alt = "instagram" id = "instagram"></a>
+    <a href="#"><img src = "image/facebook.png" alt = "facebook" id = "facebook"></a>
+    <a href="#"><img src = "image/twitter.png" alt = "twitter" id = "twitter"></a>
+    </div>
+    </li>
+    <li class = "elem_footer">
+    	<p>Інформація</p>
+    	<ul>
+    	<li><a href ="#" class = "lst_inform_footer" >Послуги</a></li>
+    	<li><a href ="#" class = "lst_inform_footer">Майстри</a></li>
+       </ul>
+    </li> 
+    <li class = "elem_footer">
+    	<p>О салонах</p>
+    	<ul>
+    	<li><a href ="Kharkiv_page.html" class = "lst_inform_footer" >Ми в Харкові</a></li>
+    	<li><a href ="#" class = "lst_inform_footer" >Ми в Києві</a></li>
+    	<li><a href ="#" class = "lst_inform_footer" >Ми в Одесі</a></li>
+    	<li><a href ="#" class = "lst_inform_footer">Ми у Варшаві</a></li>
+       </ul>
+    </li> 
+    <li class = "elem_footer">
+    	<p>Режим роботи</p>
+    	<ul>
+    		<li><p class = "lst_inform_footer">Пн-Пт 10:00-20:00</p></li>
+    		<li><p class = "lst_inform_footer">Сб-Вс 11:00-19:00</p></li>
+        </ul>
+    </li>
+
+  </ul>
+
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

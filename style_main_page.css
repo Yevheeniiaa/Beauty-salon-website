@@ -1,0 +1,601 @@
+.header{
+    max-width: 1330px;
+}
+#navbar{
+  position: fixed;
+  top:0px;
+  z-index:1;
+  width: 100%; /*Определяет ширину в процентах от содержащего блока*/
+}
+.head_menu {
+    z-index: 1;
+    display: flex;
+    align-items: center; /*выравнивание элементов внутри flex контейнера*/
+    list-style: none; /*убирает маркирование списка */
+    left: 45px;
+    padding: 25px;
+    background-color: #FFFFFF;
+    justify-content:space-between;
+    box-shadow: 1px 5px 10px -5px black;
+    flex-wrap:wrap;
+
+}
+li.head_menu{
+    position: relative; /*позиционируется относительно своего нормального положения.*/
+}
+ul.head_menu{
+    padding: 0px;
+    margin: 0px;
+}
+.elem_menu {
+  dispay: block;
+  color: #525252;
+  font-size: 19px;
+  text-align: center;/*расположение текста внутри объекта*/
+  font-family: "Georgia";
+  text-decoration: none;/*убирает подчеркивание*/
+    }
+
+  #cur_page{
+    background-color: #ECECEC;
+    color: #947C55;
+    text-decoration: underline;
+  }
+#logo{
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 50px;
+}
+#abrev{
+    color: black;
+    margin-left: 2px; 
+    font-weight: bold;
+}
+#phone{
+    width: 50px;
+    padding-right:5px;
+}
+.submenu{ 
+    z-index: 1;
+    position: absolute;
+    list-style: none;
+    padding-top: 30px;/*пространство вокруг элмента контента top, right, botton, left*/  
+    clip: rect(0 0 0 0); /*указываем прямоугольник для обрезки элемента*/
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+ul.submenu{
+    padding-left: 0;
+}
+.submenu_elem{
+  display: block;
+  padding: 2px;
+  color: #2D2D2D;
+  font-size: 19px;
+  text-align: center;/*расположение текста внутри объекта*/
+  font-family: "Georgia";
+  text-decoration: none;/*убирает подчеркивание*/
+  background-color:#FFFFFF;
+  box-shadow: 1px 5px 10px -5px black;
+  transition: all 0.3s ease;
+}
+
+li:hover>.submenu{
+    clip: auto; 
+    width: auto;
+    height: auto;
+    /*margin: 0px;*/
+}
+.submenu_elem:hover{
+    background-color: #ECECEC;
+    color: #B09467;
+    transition: all 0.3s ease;
+}
+.elem_menu:hover {
+  color: #B09467;
+  background-color: #ECECEC;
+  transition: all 0.3s ease;
+}
+.elem_menu:active{ /*active AFTER hover*/
+    background-color: #947C55;
+    text-decoration: underline;
+}
+#abrev:hover{
+    background-color: white;
+}
+#logo, #abrev:active{
+    background-color: white;
+    text-decoration: none;
+}
+/*Расположение слайдера и текста*/
+.slid_text{
+    display:flex;
+    justify-content: space-between;
+    align-items: center; /*выравнивает flex-элементы по середине контейнера*/
+}
+
+/*Слайдери*/
+.slider{
+    margin-left:40px;
+    width: 600px;
+    height: 400px;
+    overflow:hidden;
+    border:10px solid #fff;
+  }
+
+  .text_1_act{
+    display: block;
+    position: absolute;
+    top: 120px;
+    left: 45px;
+    color: black;
+  }
+  .text_1_act p{
+    margin-top: 30px;
+    font-family: "Georgia";
+    font-weight: 550;
+  }
+   .frst_phrase_frst_sl{
+    font-size: 22px;
+  }
+  .main_inf_frst_sl{
+    font-size: 16px;
+  }
+   .onl_link{
+    display: block;
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: "Georgia";
+    padding: 8px 11px 8px;/*top right bottom left*/
+    border-style: solid;
+    border-radius: 5px;
+   }
+   .onl_link:hover{
+    background: black;
+    color: white;
+   }
+   .text_2_act{
+    display: block;
+    position: absolute;
+    top: 170px;
+    right: 10px;
+    color: black;
+   }
+   .frst_phrase_sec_sl{
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 17px; 
+    font-family: "Georgia";
+   }
+   .main_inf_sec_sl{
+    padding-right: 2 px;
+    font-family: "Georgia";
+    font-size: 18px;
+    font-weight: 550;
+   }
+   .text_3_act{
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    color: black;
+   }
+   .frst_phrase_thr_sl{
+    font-size: 21px; 
+    font-family: "Georgia";
+    font-weight: 550;
+   }
+   .main_inf_thr_sl{
+    font-size: 18px; 
+    font-family: "Georgia";
+   }
+   .text_4_act{
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 50px;
+   }
+   .frst_phrase_four_sl{
+    color: #FFEFD8; /*#CCB084;*/
+    font-size: 22px; 
+    font-family: "Georgia";
+    font-weight: 550;
+   }
+   .main_inf_four_sl{
+    font-size: 15px; 
+    font-family: "Georgia";
+    text-transform: uppercase;
+    color: #FFEFD8; 
+   }
+   .text_4_act .onl_link{
+    color: #DFC59E;
+   }
+    .text_4_act .onl_link:hover{
+    background: #DFC59E;
+    color: black;
+   }
+  .middle{ 
+    visibility:hidden;
+    margin-top: 120px; 
+    border-left:0px;
+    border-right:0 px;
+  }
+  .middle.active{
+    visibility: visible;
+  }
+  .navigation{
+    position: absolute;
+    left:25%; /*Устанавливает положение левого края в % содержащего элемента*/
+    transform: translateX(-50%); /*перемещает элемент по горизонтали в 2д плоскости по оси ОХ*/
+    display: flex;
+  }
+  .bar{
+    height: 10px;
+    width:40px;
+    margin:6px;
+    cursor: pointer;
+    background-color: #B09467;
+    opacity:.8;
+    border-radius: 10px;
+  }
+
+  .bar:hover{
+    opacity: 1;
+    transform: scale(1.1); /*по горизонтали расширить в 1.1 раз*/
+  }
+
+ input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+  } 
+    .slides{
+    width:400%;
+    height:100%;
+    display:flex;
+    z-index: 0;
+  }
+  .slide{
+    position: relative;
+    width:25%;
+    transition: all .6s ease;/*все свойства, которые могут участвовать в переходе - будут, ease указывает эффект перехода с медленным началом, затем быстрым, а затем медленным завершением*/
+
+  }
+
+  .slide img{
+    width: 600px;
+    height: 400px;
+  }
+  #slide1 img{
+    opacity: .7
+  }
+
+  #r1:checked ~.s1{
+    margin-left: 0;
+  }
+  #r2:checked ~.s1{
+    margin-left: -25%;
+  }
+  #r3:checked ~.s1{
+    margin-left: -50%;
+  }
+  #r4:checked ~.s1{
+    margin-left: -75%;
+  }
+/*Расположение текста*/
+.sec_text
+{
+    margin-top:100px;
+    width:50%;
+}
+  #inf_sal_frst{
+    font-family: "Georgia";
+    font-size: 21px;
+    color: black;
+    font-weight: 540;
+    word-wrap: break-word;
+  }
+  #inf_sal_sec{
+    font-family: "Georgia";
+    font-size: 20px;
+    color: #4E4D4D;
+    font-weight: lighter;
+    word-wrap: break-word;
+  }
+/*POP_UP*/
+  .pop_up{
+    display:none;
+    width:100%;
+    height:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index:2;
+  }
+  .message{
+    display:none;
+    width:100%;
+    height:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index:3;
+  }
+  .pop_up.active{
+    display:block;
+  }
+  .message.active{
+    display:block;
+  }
+  .pop_up_container, .message_container{
+    display:flex;
+    overflow: scroll;
+    width:100%;
+    height:100%;
+  }
+  .pop_up_body, .message_body{
+    margin:auto;
+    width:500px;
+    background-color: white;
+    border-radius:10px;
+    text-align:center;
+    padding:100px 15 px 110px 15 px;
+    position:relative;
+  }
+  #artic{
+    font-size:20px;
+    font-family:"Georgia";
+    font-weight: 550;
+    color: black;
+    margin-bottom:12px;
+  }
+  .pop_up_body label{
+    font-family: "Georgia";
+    font-weight:500;
+    font-size:17px;
+  }
+
+  .pop_up_body input{
+    display:block;
+    width:330px;
+    margin:5px auto 10px auto;
+    padding:10px 10px;
+    background-color: #FFEFD3;
+    border-radius:10px;
+    border:none;
+    font-family: "Georgia";
+    font-weight:500;
+    font-size:16px;
+    color:black;
+  }
+  .pop_up_body input:focus{ /*убирает черную обводку при нажатии*/
+    outline: none;
+  }
+  .service, #userMast, #usertime, #userSalAdr {
+    margin-left:20px;
+    font-family: "Georgia";
+    font-weight:500;
+    font-size:16px;
+  }
+  .salon_adress, .master, .date, .time{
+    visibility: hidden;
+  }
+  .salon_adress.visb, .date.visb, .master.visb, .time.visb{
+    visibility: visible;
+  }
+  .pop_up_body button{
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 25px;
+    font-family:"Georgia";
+    font-weight:500;
+    font-size:19px;
+    border:none;
+    color:black;
+    border-radius:7px;
+    background-color:#F8E1BA;
+  }
+  .pop_up_close, .close_wind{
+    position:absolute;
+    top:15px;
+    right:15px;
+    font-size:21px;
+    cursor:pointer;
+  }
+  .message_body p{
+    font-size: 20px;
+    font-family: "Georgia";
+    font-weight:500;
+  }
+
+  /*FOOTER*/
+  .name_footer{
+    display: flex;
+    align-items: top; /*выравнивание элементов внутри flex контейнера*/
+    list-style: none; /*убирает маркирование списка ????*/
+    padding-top: 25px;
+    padding-bottom:25px;
+    background-color: black;
+    justify-content:space-between ;
+    overflow-x: hidden;
+  }
+  ul.name_footer{
+    padding-left:5px;
+    pudding-right:5px;
+    margin-bottom:0px;
+    bottom:0px;
+  }
+
+  .elem_footer{
+    display: block;
+    list-style: none;
+    text-decoration: none;/*убирает подчеркивание*/
+    text-align: center;/*расположение текста внутри объекта*/
+
+  }
+  li.name_footer{
+    position: relative;
+    margin-bottom: 5px;
+    text-decoration: none;
+    bottom: -150px;
+  }
+  .elem_footer p{
+    color: white;
+    margin:0px;
+    font-size: 20px;
+    font-weight: 600px;
+    font-family: "Georgia";
+  }
+ .soc_network_ic{
+    display: block;
+    padding-top: 15px;
+    position: relative;
+    left: 5px;
+    bottom: 2px;
+ }
+ .soc_network_ic img{
+    border: solid;
+    border-color:#987A4D ;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    margin: 7px;
+  }
+  .soc_network_ic img:hover
+  {
+    border: solid;
+    border-color: white;
+  }
+  .elem_footer ul{
+    padding-top: 15px;
+    padding-left: 7px;
+    padding-right:12px;
+  }
+  .lst_inform_footer{
+    font-size: 18px;
+    list-style-type: none;
+    text-decoration: none;/*убирает подчеркивание*/
+    color:white;
+    margin-top:20px;
+    font-weight: normal;
+    word-wrap: none;
+  }
+  a.lst_inform_footer:hover {
+  color: #B09467;
+  transition: all 0.3s ease;
+  }
+/*Аддитивность меню*/
+
+@media(max-width: 1100px){
+    #navbar{
+        max-width: 800px;
+    }
+    #logo{
+    padding-left: 280px;
+   }
+   #abrev
+   {
+    padding-right: 200px;
+   }
+    .elem_menu{
+        padding-right: 5px;
+    }
+    #inf_sal_frst{
+    font-size: 19px;
+  }
+  #inf_sal_sec{
+    font-size: 17px;
+  }
+    /*слайдеры*/
+   /*.middle{ 
+    margin-top: 150px;
+   }*/
+   .slider{
+    width: 450px;
+    height: 300px;
+  }
+  .slide img{
+    width: 450px;
+    height: 300px;
+  }
+  .text_1_act{
+    top: 100px;
+    left: 25px;
+  }
+   .frst_phrase_frst_sl{
+    font-size: 20px;
+  }
+  .main_inf_frst_sl{
+    font-size: 14px;
+  }
+  .onl_link{
+    font-size: 18px;
+    padding: 8px 8px 8px 8px;
+   }
+   .text_2_act{
+    top: 120px;
+    right: 10px;
+   }
+   .frst_phrase_sec_sl{
+    font-size: 16px; 
+   }
+   .main_inf_sec_sl{
+    font-size: 17px;
+   }
+   .text_3_act{
+    left: 15px;
+   }
+   .frst_phrase_thr_sl{
+    font-size: 19px; 
+   }
+   .main_inf_thr_sl{
+    font-size: 17px; 
+   }
+   .text_4_act{
+    top: 10px;
+    left: 20px;
+   }
+   .frst_phrase_four_sl{
+    font-size: 20px; 
+   }
+   .main_inf_four_sl{
+    font-size: 14px; 
+   }
+
+}
+@media(max-width: 800px){
+   #navbar {
+        max-width: 450px;
+    }
+   #logo{
+    padding-left: 40px;
+   }
+   #abrev
+   {
+    padding-right: 50px;
+   }
+   #phone{
+    width: 35px;
+   }
+   #logo{
+    width:35px;
+   }
+   .middle{ 
+    margin-top: 120px;
+   }
+   .slid_text
+   {
+    flex-direction: column;
+   }
+   .navigation{
+    left:50%;
+   }
+   .sec_text{
+    margin-top:20px;
+    width:100%;
+   }
+   }
